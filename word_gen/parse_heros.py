@@ -1,4 +1,5 @@
 import json
+import random
 
 f = open('all.json')
 data = json.load(f)
@@ -9,6 +10,7 @@ for item in data:
 	name = item['name'].replace('-','').lower().replace('the ','')
 	if ' ' not in name and len(name)<=8 and len(name)>=4 and not any(chr.isdigit() for chr in name) and name not in names:
 		names.append(name)
+random.shuffle(names)
 print(names, len(names))
 
 len_count = {}
