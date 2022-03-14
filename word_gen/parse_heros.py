@@ -8,7 +8,7 @@ f.close()
 names = []
 for item in data:
 	name = item['name'].replace('-','').lower().replace('the ','')
-	if ' ' not in name and len(name)<=8 and len(name)>=4 and not any(chr.isdigit() for chr in name) and name not in names:
+	if ' ' not in name and len(name)<=8 and len(name)>=4 and not any(chr.isdigit() for chr in name) and name not in names and item['biography']['publisher']=='Marvel Comics':
 		names.append(name)
 random.shuffle(names)
 print(names, len(names))
