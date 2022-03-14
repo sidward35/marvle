@@ -1,7 +1,7 @@
 import json
 import random
 
-f = open('all.json')
+f = open('hero_api.json')
 data = json.load(f)
 f.close()
 
